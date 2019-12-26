@@ -27,7 +27,7 @@ $('form').submit((e) => {
         $.ajax({
             type: "POST",
             url: "https://akii9ff1cj.execute-api.us-east-1.amazonaws.com/signin",
-            data: data,
+            data: JSON.stringify(data),
             contentType: "application/json",
             dataType: "json",
             headers: {
