@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Animal Village Sign-In</title>
+
+        <link href="app.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar sticky-top">
+            <span class="navbar-brand mb-0 h1">Animval Village Sign-In</span>
+        </nav>
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <form method="POST">
+                                <div class="form-row">
+                                    <div class="col-lg-6">
+                                        <label for="zip" class="required-label">What zip code are you from?</label>
+                                        <input type="zip" class="form-control required-input" id="zip" aria-describedby="zipHelp" name="zip" maxlength="5" required/>
+                                    </div>
+                                    <div class="col-lg-6 mt-4 mt-lg-0">
+                                        <label class="required-label">Is this your first time here?</label>
+                                        <div class="form-check">
+                                            <input class="form-check-input required-input" type="radio" name="first_time" id="firstTimeYes" value="yes">
+                                            <label class="form-check-label" for="firstTimeYes">
+                                                Yes
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input required-input" type="radio" name="first_time" id="firstTimeNo" value="no">
+                                            <label class="form-check-label" for="firstTimeNo">
+                                                No
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="col-lg-6">
+                                        <label for="reason" class="required-label">What brought you in today?</label>
+                                        <select type="reason" class="form-control required-input" id="reason" aria-describedby="reasonHelp" name="reason" required>
+                                            <option disabled selected>Please choose a reason...</option>
+                                            <option value="Want to adopt a dog">Want to adopt a dog</option>
+                                            <option value="Want to adopt a cat">Want to adopt a cat</option>
+                                            <option value="Looking for my lost dog">Looking for my lost dog</option>
+                                            <option value="Looking for my lost cat">Looking for my lost cat</option>
+                                            <option value="Found a lost dog and need to surrender">Found a lost dog and need to surrender</option>
+                                            <option value="Found a lost cat and need to surrender">Found a lost cat and need to surrender</option>
+                                            <option value="Need to surrender my dog">Need to surrender my dog</option>
+                                            <option value="Need to surrender my cat">Need to surrender my cat</option>
+                                            <option value="Making a donation (thank you!)">Making a donation (thank you!)</option>
+                                            <option value="Attending a birthday party">Attending a birthday party</option>
+                                            <option value="Picking up/dropping off a foster">Picking up/dropping off a foster</option>
+                                            <option value="Volunteer Training (current volunteers please sign in at Volunteer desk)">Volunteer Training (current volunteers please sign in at Volunteer desk)</option>
+                                            <option value="Volunteering [please sign in at volunteer desk]">Volunteering [please sign in at volunteer desk]</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6 mt-4 mt-lg-0">
+                                        <label for="people" class="required-label">How many people are with you?</label>
+                                        <select type="people" class="form-control required-input" id="people" aria-describedby="peopleHelp" name="people" required>
+                                            <option disabled selected>Please choose a number...</option>
+                                            <option value="Just me">Just me</option>
+                                            <option value="1 other person">1 other person</option>
+                                            <option value="2 other people">2 other people</option>
+                                            <option value="3 other people">3 other people</option>
+                                            <option value="4 other people">4 other people</option>
+                                            <option value="More than four other people">More than four other people</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group text-center">
+                                    <button type="submit" class="btn btn-info">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</html>

@@ -1,0 +1,34 @@
+@import "colors";
+@import "~bootstrap";
+
+body {
+    background-color: $grey;
+
+    nav.navbar {
+        background-color: $dark-grey;
+
+        .navbar-brand {
+            color: whitesmoke;
+        }
+    }
+
+    div.container-fluid {
+        background-color: $grey;
+    }
+
+    label.required-label {
+        span.required-indicator {
+            color: red;
+            margin-left: 5px;
+        }
+    }
+
+    div.form-row {
+        margin-bottom: 2rem;
+
+        .col-lg-6 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}
