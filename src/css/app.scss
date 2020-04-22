@@ -12,8 +12,9 @@ body {
         }
     }
 
-    div.container-fluid {
+    #main-container {
         background-color: $grey;
+        margin-top: 10rem;
     }
 
     label.required-label {

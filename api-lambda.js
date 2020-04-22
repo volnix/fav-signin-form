@@ -14,7 +14,7 @@ exports.handler = (event, context, callback) => {
     // header first and use a different parsing strategy based on that value.
     const requestBody = JSON.parse(event.body);
 
-    recordSignIn(requestBody.zip, requestBody.first_time, requestBody.reason, requestBody.people).then(() => {
+    recordSignIn(requestBody.zip, requestBody.first_time, requestBody.reason, requestBody.people, requestBody.why_surrender, requestBody.hear).then(() => {
         // Because this Lambda function is called by an API Gateway proxy integration
         // the result object must use the following structure.
         callback(null, {
@@ -44,7 +44,7 @@ exports.handler = (event, context, callback) => {
     });
 };
 
-function recordSignIn(zip, first_time, reason, people) {
+function recordSignIn(zip, first_time, reason, people, why_surrender, hear) {
     return ddb.put({
         TableName: 'AnimalVillageSignIns',
         Item: {
@@ -53,6 +53,8 @@ function recordSignIn(zip, first_time, reason, people) {
             first_time: first_time,
             reason: reason,
             people: people,
+            why_surrender: why_surrender,
+            hear: hear,
             created_date: new Date().toISOString()
         },
     }).promise();

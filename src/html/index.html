@@ -4,15 +4,18 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="favicon.jpg" type="image/jpeg">
+        
         <title>Animal Village Sign-In</title>
 
         <link href="app.css" rel="stylesheet">
     </head>
     <body>
-        <nav class="navbar sticky-top">
+        <nav class="navbar sticky-top text-center">
             <span class="navbar-brand mb-0 h1">Animval Village Sign-In</span>
         </nav>
-        <div class="container-fluid mt-4">
+        <div class="container-fluid" id="main-container">
             <div class="row">
                 <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
                     <div class="card">
@@ -42,7 +45,7 @@
                                 <div class="form-row">
                                     <div class="col-lg-6">
                                         <label for="reason" class="required-label">What brought you in today?</label>
-                                        <select type="reason" class="form-control required-input" id="reason" aria-describedby="reasonHelp" name="reason" required>
+                                        <select class="form-control required-input" id="reason" aria-describedby="reasonHelp" name="reason" required>
                                             <option disabled selected>Please choose a reason...</option>
                                             <option value="Want to adopt a dog">Want to adopt a dog</option>
                                             <option value="Want to adopt a cat">Want to adopt a cat</option>
@@ -61,7 +64,7 @@
                                     </div>
                                     <div class="col-lg-6 mt-4 mt-lg-0">
                                         <label for="people" class="required-label">How many people are with you?</label>
-                                        <select type="people" class="form-control required-input" id="people" aria-describedby="peopleHelp" name="people" required>
+                                        <select class="form-control required-input" id="people" aria-describedby="peopleHelp" name="people" required>
                                             <option disabled selected>Please choose a number...</option>
                                             <option value="Just me">Just me</option>
                                             <option value="1 other person">1 other person</option>
@@ -69,6 +72,40 @@
                                             <option value="3 other people">3 other people</option>
                                             <option value="4 other people">4 other people</option>
                                             <option value="More than four other people">More than four other people</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row mt-4">
+                                    <div class="col-lg-6" id="why_surrender-wrapper" style="display: none;">
+                                        <label for="why_surrender" class="required-label">If you are surrending your pet, please tell us why</label>
+                                        <select type="why_surrender" class="form-control" id="why_surrender" aria-describedby="surrenderHelp" name="why_surrender" required>
+                                            <option disabled selected>Please choose a reason...</option>
+                                            <option value="Have too many animals">Have too many animals</option>
+                                            <option value="Work schedule changed and don’t have time to care for them">Work schedule changed and don’t have time to care for them</option>
+                                            <option value="Cannot have them in new home I’m moving to">Cannot have them in new home I’m moving to</option>
+                                            <option value="Pet is sick and I cannot afford treatment">Pet is sick and I cannot afford treatment</option>
+                                            <option value="Cannot afford food/routine vet care for them">Cannot afford food/routine vet care for them</option>
+                                            <option value="Trouble with potty training or destructive chewing">Trouble with potty training or destructive chewing</option>
+                                            <option value="Other behavior issue">Other behavior issue</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <label for="hear" class="required-label">How did you hear about LRAV?</label>
+                                        <select type="hear" class="form-control" id="hear" aria-describedby="hearHelp" name="hear" required>
+                                            <option disabled selected>Please choose a method...</option>
+                                            <option value="TV">TV</option>
+                                            <option value="From someone I know">From someone I know</option>
+                                            <option value="Friends of the Animal Village">Friends of the Animal Village</option>
+                                            <option value="Facebook">Facebook</option>
+                                            <option value="Instagram">Instagram</option>
+                                            <option value="City website">City website</option>
+                                            <option value="Petfinder website">Petfinder website</option>
+                                            <option value="Google">Google</option>
+                                            <option value="Adopted in the past">Adopted in the past</option>
+                                            <option value="Called 311">Called 311</option>
+                                            <option value="Other">Other</option>
                                         </select>
                                     </div>
                                 </div>
